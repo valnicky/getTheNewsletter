@@ -1,5 +1,7 @@
 import React from 'react'
 
+import {ThemeContext} from '../ThemeContext.js';
+
 function Newsletter(props) {
     const [email, setEmail] = React.useState('');
     const [emailFocused, setEmailFocused] = React.useState(false);
@@ -51,7 +53,27 @@ const styles= {
     display: 'flex',
     alignItems: 'flex-end',
     pointerEvents: 'none'
-    })
+    }),
+    bar: ({i})=>({
+        height: '0.5em',
+        width: '20%',
+        transformOrigin: 'bottom',
+        transition: 'all 1s',
+        background: color[Object.keys(color)[i%Object.keys(color).length> 0]]
+    }),
+    header: ()=>({
+        position: 'relative',
+        color: 'white',
+        zIndex: '1',
+        textTransform: 'uppercase',
+        fontSize: '0.85em',
+        textShadow: '0 3px 2px #000',
+    }),
+    headerH2: ()=>({
+        
+    }),
+    
+    
     
     
     
