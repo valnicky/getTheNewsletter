@@ -3,15 +3,14 @@ import  '../Newsletter.css';
 
 function Newsletter(props) {
     const [email, setEmail] = React.useState('');
-    const [emailFocused, setEmailFocused] = React.useState(false);
-    
-  
+     
     const emailPartsCount = countEmailParts(email);
     
     return ( < section className="es-newsletter">
         <div className="es-newsletter__spectrum"  arria-hidden>
             {Array.from(Array(5)).map((_, i)=>(
-                <div className={`es-newsletter__bar ${i + 1 <= emailPartsCount && 'es-newsletter__bar--active'}`}
+                <div className={`es-newsletter__bar ${i+1 <= emailPartsCount && 'es-newsletter__bar--active ' }`}
+                
                 key={i} ></div>
             ))}
         </div>
@@ -23,8 +22,8 @@ function Newsletter(props) {
         placeholder = "Your email"
 value={email}
 onChange={(evt)=> setEmail(evt.target.value)}
-onFocus = {()=> setEmailFocused(true)}
-onBlur = {()=>setEmailFocused(false)}
+
+
      />
         <button className={`es-newsletter__submit`}> Sign up </button> </section>
     )

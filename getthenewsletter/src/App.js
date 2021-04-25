@@ -20,9 +20,9 @@ const theme = {
 function App() {
     return (
         <div className = "app__newsletter" >
-        <ThemeProvider theme = { theme } >
+        
         <Newsletter />
-        </ThemeProvider>
+     
         </div>
     );
 }
