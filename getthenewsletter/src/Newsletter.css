@@ -111,6 +111,7 @@
 @media (min-width:800px) {
     .es-newsletter {
         font-size: 2.25em;
-        max-width: 700px;
+        max-width: 50%;
+        margin-left: 22%;
     }
 }
