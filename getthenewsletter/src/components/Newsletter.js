@@ -7,7 +7,7 @@ function Newsletter(props) {
     const emailPartsCount = countEmailParts(email);
     
     return ( < section className="es-newsletter">
-        <div className="es-newsletter__spectrum"  arria-hidden>
+        <div className="es-newsletter__spectrum"  aria-hidden>
             {Array.from(Array(5)).map((_, i)=>(
                 <div className={`es-newsletter__bar ${i+1 <= emailPartsCount && 'es-newsletter__bar--active ' }`}
                 
@@ -20,10 +20,8 @@ function Newsletter(props) {
         < input className="es-newsletter__email"
         type = "email"
         placeholder = "Your email"
-value={email}
-onChange={(evt)=> setEmail(evt.target.value)}
-
-
+       value={email}
+        onChange={(evt)=> setEmail(evt.target.value)}
      />
         <button className={`es-newsletter__submit`}> Sign up </button> </section>
     )
